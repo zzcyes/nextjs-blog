@@ -1,0 +1,22 @@
+.briefWrap{
+    display:flex;
+    width: 100%;
+    min-height: 60px;
+}
+
+.avatars{
+    border-radius: 50%;
+}
+
+.brief{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 14px;
+    color: var(--color-fg-title);
+}
+
+.brief a{
+    box-shadow: 0 1px 0 0 currentColor;
+    color: var(--color-primary-fg);
+}

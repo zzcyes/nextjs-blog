@@ -1,0 +1,24 @@
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+  color: var(--color-fg-title);
+}
+
+.title{
+  width: 100%;
+  display:inline-block;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.brief{
+  padding: 0;
+}
+
+.dot::before,
+.dot::after{
+  content: '\00a0';
+}

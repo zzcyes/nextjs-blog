@@ -1,0 +1,110 @@
+
+.homePageContainer {
+  min-height: 100vh;
+  padding: 0 2rem;
+  background-color: var(--color-bg-page);
+  font-family: PuHuiTi;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.homePage{
+  padding: 2.625rem 1.3125rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--markdown-max-width);
+  margin: 10px auto;
+}
+
+/* .postContainer{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 16px;
+  background-color: var(--color-bg-page);
+  min-height: 100vh;
+}    */
+
+.markdownContent{
+  width: 100%;
+  background-color: var(--color-bg-page);
+  padding: 0px; 
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+
+.leftSide{
+  position: relative; 
+  right: 20vw;
+  width: 20vw;
+  margin-right: -20vw; 
+}
+
+.leftSideContent{
+  position: fixed;
+  margin-top: 2.625rem;
+  max-width: 20vw;
+  max-height: calc(100% - 2.625rem);
+  overflow-wrap: wrap;
+}
+
+.leftSideContent:hover{
+  overflow-y: auto;
+}
+
+
+@media (max-width: 1400px) {
+  .homePageContainer {
+     display: flex;
+     flex-direction: column;
+  }
+  .leftSide{
+    position: inherit;
+    width: 100%;
+  /* 
+    right: 0;
+    width: 0; */
+    margin-right: 0;
+  }
+  .leftSideContent{
+    position: relative;
+  }
+
+  .markdownContent{
+    max-width: var(--markdown-small-max-width);
+  }
+}
+
+
+.discussions{
+  display:flex;
+  width: 100%;
+  margin-bottom: 50px;
+  color: var(--color-fg-title);
+}
+
+
+.discussions a{
+  box-shadow: 0 1px 0 0 currentColor;
+  color: var(--color-primary-fg);
+  font-style: italic;
+}
+
+.discussions a::before,
+.discussions a::after{
+  content: '\00a0';
+}
+
+.dot{
+  min-width: 1em;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+.mainArticleTitle{
+    width: 100%;
+}
+
+.articleList{
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+  .articleItem{
+    margin: 30px 0px;
+    cursor: pointer;
+  }
+  
+
+  .articleTitle{
+    display: inline;
+    font-weight: normal;
+    color: var(--color-primary-fg);
+    font-size: 20px;
+    font-family: letter;
+    margin-right: 16px;
+  }
+  
+  .articleTime{
+    font-size: 12px;
+    font-family: letter;
+    color: var(--color-fg-title);
+  }
