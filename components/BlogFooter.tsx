@@ -1,6 +1,7 @@
 import styles from "./BlogFooter.module.css";
-// import Image from "next/image";
-import Image from "./Image";
+import Image from "next/image";
+// import Image from "./Image";
+import Email from "./../public/email.png";
 
 const BlogFooter = () => {
   return (
@@ -11,7 +12,7 @@ const BlogFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/email.png" alt="avatars icon" width={30} height={30} />
+          <Image src={Email} alt="avatars icon" width={30} height={30} />
         </a>
       </div>
       <a

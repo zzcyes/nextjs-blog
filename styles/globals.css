@@ -1,62 +1,82 @@
-
-
-
 @font-face {
-  font-family: letter;
-  src: url(./../public/font/letter.woff2);
+    font-family: CuteAlphabet;
+    src: url(./../public/font-split/CuteAlphabet.woff2);
 }
 
 @font-face {
-  font-family: PuHuiTi;
-  src: url(./../public/font/Alibaba-PuHuiTi-Bold.ttf),
-        url(./../public/font/Alibaba-PuHuiTi-Heavy.ttf),
-        url(./../public/font/Alibaba-PuHuiTi-Light.ttf),
-        url(./../public/font/Alibaba-PuHuiTi-Medium.ttf),
-        url(./../public/font/Alibaba-PuHuiTi-Regular.ttf);
+    font-family: PuHuiTi;
+    src: url(./../public/font-split/Alibaba-PuHuiTi-Regular.ttf);
+}
+
+@font-face {
+    font-family: Handdrawn;
+    src: url(./../public/font-split/Handdrawn.ttf);
 }
 
 
+/* 
+@font-face {
+    font-family: PuHuiTi-Bold;
+    src: url(./../public/font-split/Alibaba-PuHuiTi-Bold.ttf);
+}
 
+@font-face {
+    font-family: PuHuiTi-Heavy;
+    src: url(./../public/font-split/Alibaba-PuHuiTi-Heavy.ttf);
+}
+
+@font-face {
+    font-family: PuHuiTi-Light;
+    src: url(./../public/font-split/Alibaba-PuHuiTi-Light.ttf);
+}
+
+@font-face {
+    font-family: PuHuiTi-Medium;
+    src: url(./../public/font-split/Alibaba-PuHuiTi-Medium.ttf);
+}
+
+*/
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: PuHuiTi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: CuteAlphabet, PuHuiTi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .markdown-body {
-  box-sizing: border-box;   
-  min-width:  var(--markdown-min-width);
-  max-width: var(--markdown-max-width);
-  margin: 0 auto;
-  padding: 20px;
+    box-sizing: border-box;
+    min-width: var(--markdown-min-width);
+    max-width: var(--markdown-max-width);
+    margin: 0 auto;
+    padding: 20px;
 }
 
 @media (max-width: 767px) {
-  .markdown-body {
-      padding: 15px;
-  }
+    .markdown-body {
+        padding: 15px;
+    }
 }
 
+
 /* 美化滚动条 */
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 4px;
-  background:var(--color-bg-page);
+    width: 6px;
+    height: 4px;
+    background: var(--color-bg-page);
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: var(--color-primary-fg);
+    border-radius: 4px;
+    background: var(--color-primary-fg);
 }

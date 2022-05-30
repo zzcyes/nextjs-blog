@@ -1,6 +1,6 @@
 .footer {
     max-width: var(--content-max-width);
-    margin:0px auto;
+    margin: 0px auto;
     padding-top: 1.3125rem;
     color: var(--color-fg-title);
 }
@@ -10,9 +10,8 @@
     align-items: center; */
     box-shadow: 0 1px 0 0 currentColor;
     color: var(--color-primary-fg);
- }
+}
 
-
- .icon{
-   float: right;
+.icon {
+    float: right;
 }

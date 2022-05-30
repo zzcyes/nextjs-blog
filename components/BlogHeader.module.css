@@ -1,17 +1,46 @@
-.blogHeader{
-    display:flex;
+.blogHeader {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 42px;
-  }
-  
-.blogTitle{
+    font-family: Handdrawn;
+}
+
+.blogTitle {
     font-size: 2.5rem;
     line-height: 2.5rem;
     color: var(--color-primary-fg);
     cursor: pointer;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .blogTitle {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogTitle {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .blogTitle {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .blogTitle {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
 }

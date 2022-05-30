@@ -1,14 +1,15 @@
-// import Image from "next/image";
+import Image from "next/image";
 import styles from "./BlogBrief.module.css";
-import Image from "./Image";
+// import Image from "./Image";
+import Avatars from "../public/avatars.jpg";
 
 const BlogBrief = () => {
   return (
     <div className={styles.briefWrap}>
-      <div>
+      <div className={styles.avatarsBox}>
         <Image
           className={styles.avatars}
-          src="/avatars.jpg"
+          src={Avatars}
           alt="avatars icon"
           width={60}
           height={60}
