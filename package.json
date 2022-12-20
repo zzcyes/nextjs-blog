@@ -1,41 +1,37 @@
 {
-    "name": "nextjs-app",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "yarn update && next build",
-        "start": "next start",
-        "lint": "next lint",
-        "splitFont": "node scripts/splitFont.js",
-        "genContents": "node scripts/genContents.js",
-        "update": "yarn splitFont & yarn genContents",
-        "serve": "yarn update && yarn dev"
-    },
-    "dependencies": {
-        "@next/mdx": "^12.1.6",
-        "@types/markdown-navbar": "^1.4.0",
-        "@types/react-toggle": "^4.0.3",
-        "github-markdown-css": "^5.1.0",
-        "gray-matter": "^4.0.3",
-        "lz-string": "^1.4.4",
-        "markdown-navbar": "^1.4.3",
-        "moment": "^2.29.3",
-        "next": "12.1.6",
-        "raw-loader": "^4.0.2",
-        "react": "18.1.0",
-        "react-dom": "18.1.0",
-        "react-markdown": "^8.0.3",
-        "react-toggle": "^4.1.2",
-        "remark-gfm": "^3.0.1"
-    },
-    "devDependencies": {
-        "@types/node": "17.0.36",
-        "@types/react": "18.0.9",
-        "@types/react-dom": "18.0.5",
-        "eslint": "8.16.0",
-        "eslint-config-next": "12.1.6",
-        "fontmin": "^0.9.9",
-        "typescript": "4.7.2"
-    }
+  "name": "nextjs-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/splitFont.js && node scripts/genContents.js && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/mdx": "^12.1.6",
+    "@types/markdown-navbar": "^1.4.0",
+    "@types/react-toggle": "^4.0.3",
+    "github-markdown-css": "^5.1.0",
+    "gray-matter": "^4.0.3",
+    "lz-string": "^1.4.4",
+    "markdown-navbar": "^1.4.3",
+    "moment": "^2.29.3",
+    "next": "12.1.6",
+    "raw-loader": "^4.0.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-markdown": "^8.0.3",
+    "react-toggle": "^4.1.2",
+    "remark-gfm": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.36",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "fontmin": "^0.9.9",
+    "typescript": "4.7.2"
+  }
 }
