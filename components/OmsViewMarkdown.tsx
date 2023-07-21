@@ -12,6 +12,7 @@ import {
   oneLight,
   // @ts-ignore
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import remarkGfm from "remark-gfm"; // markdown 对表格/删除线/脚注等的支持
 
 // darcula webstorm
 // vscDarkPlus vscode暗色主题
@@ -40,6 +41,7 @@ const OmsViewMarkdown = (props: tProps) => {
   }
   return (
     <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
       components={{
         // @ts-ignore
         code({ node, inline, className, children, ...props }) {
