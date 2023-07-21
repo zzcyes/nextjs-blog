@@ -4,6 +4,7 @@ date: "2022-12-19 22:54:44"
 ---
 
 ## Versions
+
 开发环境、npm包版本信息：
 
 | 名称 | 版本 |
@@ -153,7 +154,7 @@ console.log('code is:', code);
 
 为了验证项目中引用的  @babel/generator  是否成功链接到全局目录下，可以通过以下两种方法检验：
 
-1. package-lock.json
+- package-lock.json
 
 通过查看，package-lock.json, 会发现 "node_modules/@babel/core/node_modules/@babel/generator" 下多了 resolved 属性，对应的值恰为刚刚 link 到全局目录下 @babel/generator  的真实链接路径  "file:../babel-forked-v7.20.6/packages/babel-generator"
 
@@ -163,7 +164,7 @@ console.log('code is:', code);
 
 ![babel-source-debugger-015.png](https://www.zzcyes.com/images/babel-source-debugger-015.png)
 
-1. 打印日志
+- 打印日志
 
 在链接的 @babel/generator 全局模块下打印日志
 在 packages/babel-generator/index.ts 中，对 Generator 的构造函数添加 console.log ，并输入命令 make build 重新构建 lib。

@@ -9,11 +9,15 @@ import styles from "./[slug].module.css";
 
 import useBlogTheme from "../../../hooks/useBlogTheme";
 import moment from "moment";
+// @ts-ignore
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+// @ts-ignore
 import remarkGfm from "remark-gfm"; // markdown 对表格/删除线/脚注等的支持
+// @ts-ignore
 import MarkNav from "markdown-navbar"; // markdown 目录
 import { formatDate, getCoffe } from "../../../utils/common";
+import OmsViewMarkdown from "../../../components/OmsViewMarkdown";
 
 interface PostTemplateProps {
   content?: string;
@@ -77,9 +81,13 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
             />
             <div className={`markdown-body ${styles.markdownContent}`}>
               {markdownContent && (
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {markdownContent}
-                </ReactMarkdown>
+                <OmsViewMarkdown
+                  textContent={markdownContent}
+                  darkMode={!isThemeLight}
+                ></OmsViewMarkdown>
+                // <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                //   {markdownContent}
+                // </ReactMarkdown>
               )}
             </div>
 
