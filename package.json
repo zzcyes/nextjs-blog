@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/splitFont.js && node scripts/genContents.js && next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "node scripts/splitFont.js && node scripts/genContents.js && next build && yarn move",
+    "start": " next start",
+    "lint": "next lint",
+    "move": "rm -rf build && cp -r .next build"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
