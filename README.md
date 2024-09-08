@@ -1,5 +1,9 @@
 ## Getting Started
 
+![demo.png](./assets/demo.png)
+
+## Usage
+
 First, build the development server:
 
 ```bash
