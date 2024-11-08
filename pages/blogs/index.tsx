@@ -1,15 +1,14 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
 import Head from "next/head";
 import styles from "./index.module.css";
 import matter from "gray-matter";
 import Router from "next/router";
-import useBlogTheme from "../../hooks/useBlogTheme";
 import BlogHeader from "../../components/BlogHeader";
 import BlogBrief from "../../components/BlogBrief";
 import BlogList, { IBlog } from "../../components/BlogList";
 import BlogFooter from "../../components/BlogFooter";
-
+import { GlobalContext } from "../../pages/_app";
+import { useContext } from "react";
 interface IHomeProps {
   blogTitle?: string;
   blogs?: IBlog[];
@@ -18,8 +17,7 @@ interface IHomeProps {
 const contentPaths = require("../../content.json");
 
 const Home: NextPage = (props: IHomeProps) => {
-  const { theme, toggleTheme } = useBlogTheme();
-  const isThemeLight = theme === "light";
+  const { theme, toggleTheme } = useContext(GlobalContext); // 获取当前主题状态
 
   const onRouterActicle = (item: IBlog) => {
     Router.push({
@@ -27,11 +25,6 @@ const Home: NextPage = (props: IHomeProps) => {
       query: { words: item.words, birthtimeMs: item.birthtimeMs },
     });
   };
-
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    document.body.className = isThemeLight ? "light" : "night";
-  }, [isThemeLight]);
 
   return (
     <div className={styles.homePageContainer}>
@@ -44,7 +37,7 @@ const Home: NextPage = (props: IHomeProps) => {
       <div className={styles.homePage}>
         <main className={styles.main}>
           <BlogHeader
-            isThemeLight={isThemeLight}
+            isThemeLight={theme === "light"}
             onChange={toggleTheme}
             onClick={() => {
               Router.push({ pathname: `/blogs` });

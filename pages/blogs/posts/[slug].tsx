@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
 import Head from "next/head";
 import Router, { useRouter } from "next/router";
 import BlogHeader from "../../../components/BlogHeader";
@@ -7,7 +6,6 @@ import BlogBrief from "../../../components/BlogBrief";
 import BlogArticleTitle from "../../../components/BlogArticleTitle";
 import styles from "./[slug].module.css";
 
-import useBlogTheme from "../../../hooks/useBlogTheme";
 import moment from "moment";
 // @ts-ignore
 import matter from "gray-matter";
@@ -18,6 +16,8 @@ import remarkGfm from "remark-gfm"; // markdown 对表格/删除线/脚注等的
 import MarkNav from "markdown-navbar"; // markdown 目录
 import { formatDate, getCoffe } from "../../../utils/common";
 import OmsViewMarkdown from "../../../components/OmsViewMarkdown";
+import { GlobalContext } from "../../../pages/_app";
+import { useContext } from "react";
 
 interface PostTemplateProps {
   content?: string;
@@ -35,13 +35,8 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
     moment(formatDate(birthtimeMs)).format("YYYY年MM月DD日 HH:mm:ss");
   const markdownContent: string = content || "";
 
-  const { theme, toggleTheme } = useBlogTheme();
+  const { theme, toggleTheme } = useContext(GlobalContext); // 获取当前主题状态
   const isThemeLight = theme === "light";
-
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    document.body.className = isThemeLight ? "light" : "night";
-  }, [isThemeLight]);
 
   return (
     <>
@@ -132,10 +127,8 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
 PostTemplate.getInitialProps = async (context) => {
   const { slug } = context.query;
   const content: any = await import(`../../../content/${slug}.md`);
-  console.debug("content:", content);
   // Parse .md data through `matter`
   const data = matter(content.default);
-  console.debug(data);
   // Pass data to our component props
   return { ...data };
   return { slug };
