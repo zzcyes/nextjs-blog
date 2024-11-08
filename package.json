@@ -4,16 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "sbuild": "node scripts/splitFont.js && node scripts/genContents.js && next build && yarn move",
     "start": "next start",
-    "reload": "npm run only:build && npm run start",
-    "lint": "next lint",
-    "split": "node scripts/splitFont.js && node scripts/genContents.js",
-    "prebuild": "npm run split",
     "build": "next build",
-    "only:build": "next build",
-    "postbuild": "npm run move",
-    "move": "rm -rf build && cp -r .next build"
+    "precompile": "npm run split",
+    "compile": "npm run build",
+    "postcompile": "npm run move",
+    "reload": "npm run compile && pm2 reload blogs",
+    "restart": "npm run compile && npm run start",
+    "lint": "next lint",
+    "split": "node scripts/split.js",
+    "move": "node scripts/move.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
