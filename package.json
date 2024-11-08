@@ -4,9 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/splitFont.js && node scripts/genContents.js && next build && yarn move",
-    "start": " next start",
+    "sbuild": "node scripts/splitFont.js && node scripts/genContents.js && next build && yarn move",
+    "start": "next start",
+    "reload": "npm run only:build && npm run start",
     "lint": "next lint",
+    "split": "node scripts/splitFont.js && node scripts/genContents.js",
+    "prebuild": "npm run split",
+    "build": "next build",
+    "only:build": "next build",
+    "postbuild": "npm run move",
     "move": "rm -rf build && cp -r .next build"
   },
   "dependencies": {

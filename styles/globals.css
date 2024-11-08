@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: CuteAlphabet;
     src: url(./../public/font-split/CuteAlphabet.woff2);
 }
@@ -12,8 +12,6 @@
     font-family: Handdrawn;
     src: url(./../public/font-split/Handdrawn.ttf);
 }
-
-*/
 
 /* 
 @font-face {
