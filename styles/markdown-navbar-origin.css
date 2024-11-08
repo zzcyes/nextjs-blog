@@ -27,7 +27,8 @@
 }
 
 .markdown-navigation .title-anchor small {
-    margin: 0 0.8em;
+    margin-right: 0.4em;
+    font-size: inherit;
 }
 
 .markdown-navigation .title-level1 {
