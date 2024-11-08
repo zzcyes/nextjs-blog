@@ -57,7 +57,7 @@
 }
 
 /* 大屏幕（台式机，宽度在 992px - 1200px） */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1920px) {
     .markdown-navigation {
         font-size: 1rem;
         /* 16px */
@@ -65,9 +65,9 @@
 }
 
 /* 超大屏幕（宽度大于 1200px） */
-@media (min-width: 1200px) {
+@media (min-width: 1921px) {
     .markdown-navigation {
-        font-size: 1.125rem;
-        /* 18px */
+        font-size: 1.0625rem
+            /* 17px */
     }
 }
