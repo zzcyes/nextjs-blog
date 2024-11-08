@@ -13,11 +13,13 @@
     "restart": "npm run compile && npm run start",
     "lint": "next lint",
     "split": "node scripts/split.js",
-    "move": "node scripts/move.js"
+    "move": "node scripts/move.js",
+    "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
+    "@next/bundle-analyzer": "^15.0.3",
     "@next/mdx": "^12.1.6",
     "@types/markdown-navbar": "^1.4.0",
     "@types/react-toggle": "^4.0.3",
