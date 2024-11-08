@@ -1,0 +1,73 @@
+@import "./markdown-navbar-origin.css";
+
+
+.markdown-navigation {
+    font-size: 14px;
+    font-family: PuHuiTi;
+}
+
+.markdown-navigation .title-anchor:hover,
+.markdown-navigation .title-anchor.active {
+    background-color: var(--color-bg-page);
+}
+
+.markdown-navigation .title-anchor.active {
+    color: var(--color-primary-fg);
+}
+
+.markdown-navigation .title-anchor {
+    color: var(--color-fg-title);
+}
+
+
+.markdown-navigation {
+    font-size: 14px;
+    /* 默认字体大小 */
+    font-family: PuHuiTi;
+}
+
+.markdown-navigation {
+    font-size: 0.875rem;
+    /* 默认 14px */
+    font-family: PuHuiTi;
+}
+
+/* 超小屏幕（手机竖屏，宽度小于 576px） */
+@media (max-width: 576px) {
+    .markdown-navigation {
+        font-size: 0.75rem;
+        /* 12px */
+    }
+}
+
+/* 小屏幕（平板或手机横屏，宽度在 576px - 768px） */
+@media (min-width: 576px) and (max-width: 768px) {
+    .markdown-navigation {
+        font-size: 0.8125rem;
+        /* 13px */
+    }
+}
+
+/* 中屏幕（平板横屏或小型桌面设备，宽度在 768px - 992px） */
+@media (min-width: 768px) and (max-width: 992px) {
+    .markdown-navigation {
+        font-size: 0.9375rem;
+        /* 15px */
+    }
+}
+
+/* 大屏幕（台式机，宽度在 992px - 1200px） */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .markdown-navigation {
+        font-size: 1rem;
+        /* 16px */
+    }
+}
+
+/* 超大屏幕（宽度大于 1200px） */
+@media (min-width: 1200px) {
+    .markdown-navigation {
+        font-size: 1.125rem;
+        /* 18px */
+    }
+}
