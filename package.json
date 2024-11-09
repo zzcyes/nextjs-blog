@@ -18,12 +18,13 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.0.3",
+    "@next/eslint-plugin-next": "^15.0.3",
     "@types/markdown-navbar": "^1.4.0",
     "@types/react-toggle": "^4.0.3",
     "gray-matter": "^4.0.3",
     "markdown-navbar": "^1.4.3",
     "moment": "^2.29.3",
-    "next": "^13.5.7",
+    "next": "^15.0.3",
     "raw-loader": "^4.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -34,12 +35,12 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@types/node": "17.0.36",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.5",
-    "eslint": "8.16.0",
-    "eslint-config-next": "^13.5.7",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.10",
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^15.0.3",
     "fontmin": "^0.9.9",
-    "typescript": "4.7.2"
+    "typescript": "^4.9.5"
   }
 }
