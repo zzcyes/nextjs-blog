@@ -5,6 +5,7 @@ import BlogHeader from "../../../components/BlogHeader";
 import BlogBrief from "../../../components/BlogBrief";
 import BlogArticleTitle from "../../../components/BlogArticleTitle";
 import styles from "./[slug].module.css";
+import favicon from "../../../public/favicon.ico";
 
 import moment from "moment";
 // @ts-ignore
@@ -42,7 +43,7 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={favicon.src} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className={styles.homePageContainer}>
