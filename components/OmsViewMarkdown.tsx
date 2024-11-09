@@ -24,7 +24,7 @@ type tProps = {
 
 const them = {
   dark: atomDark,
-  light: atomLight,
+  light: atomDark,
 };
 // const them = {
 //   dark: vscDarkPlus,
@@ -33,12 +33,12 @@ const them = {
 
 const OmsViewMarkdown = (props: tProps) => {
   const { textContent, darkMode } = props;
-  if (typeof darkMode === "undefined") {
-    them.light = atomLight;
-  }
-  if (typeof darkMode === "boolean") {
-    them.light = atomLight;
-  }
+  // if (typeof darkMode === "undefined") {
+  //   them.light = atomLight;
+  // }
+  // if (typeof darkMode === "boolean") {
+  //   them.light = atomLight;
+  // }
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Toggle from "react-toggle";
 import "react-toggle/style.css";
 import styles from "./BlogHeader.module.css";
@@ -13,6 +13,8 @@ interface BlogHeaderProps {
   onClick: () => void;
 }
 
+const iconImageSize = 50;
+
 const BlogHeader = ({ isThemeLight, onChange, onClick }: BlogHeaderProps) => {
   return (
     <div className={styles.blogHeader}>
@@ -23,7 +25,14 @@ const BlogHeader = ({ isThemeLight, onChange, onClick }: BlogHeaderProps) => {
         }}
       >
         我不是橙子
-        <Image src={OrangeEye} alt="orange icon" width={50} height={50} />啊
+        <Image
+          className={styles.iconImage}
+          src={OrangeEye}
+          alt="orange icon"
+          width={iconImageSize}
+          height={iconImageSize}
+        />
+        啊
       </div>
       <Toggle
         checked={isThemeLight}

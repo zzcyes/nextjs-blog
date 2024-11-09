@@ -1,5 +1,5 @@
 import styles from "./BlogFooter.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 // import Image from "./Image";
 import Email from "./../public/email.png";
 

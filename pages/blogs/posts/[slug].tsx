@@ -29,7 +29,7 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
   const { query } = useRouter();
   const words = Number(query.words);
   const birthtimeMs = Number(query.birthtimeMs);
-  const { num: reading, coffe } = getCoffe(words);
+  const { num: reading, coffee } = getCoffe(words);
   const date =
     frontmatter.date ??
     moment(formatDate(birthtimeMs)).format("YYYY年MM月DD日 HH:mm:ss");
@@ -37,11 +37,11 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
 
   const { theme, toggleTheme } = useContext(GlobalContext); // 获取当前主题状态
   const isThemeLight = theme === "light";
-
+  const title = frontmatter.title + " | 钟子晨的博客";
   return (
     <>
       <Head>
-        <title>{frontmatter.title} | 钟子晨的博客</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -71,7 +71,7 @@ const PostTemplate: NextPage = ({ content, data }: PostTemplateProps) => {
             <BlogArticleTitle
               title={frontmatter.title}
               reading={reading}
-              coffe={coffe}
+              coffee={coffee}
               date={date}
             />
             <div className={`markdown-body ${styles.markdownContent}`}>

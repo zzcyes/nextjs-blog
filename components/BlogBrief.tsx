@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./BlogBrief.module.css";
 // import Image from "./Image";
 import Avatars from "../public/avatars.jpg";
@@ -18,11 +18,14 @@ const BlogBrief = () => {
 
       <div className={styles.brief}>
         <div>
-          Personal blog by{" "}
+          Personal blog by
           <a
             href="https://www.zzcyes.com"
             target="_blank"
             rel="noopener noreferrer"
+            style={{
+              marginLeft: "0.2rem",
+            }}
           >
             Zhong Zichen
           </a>

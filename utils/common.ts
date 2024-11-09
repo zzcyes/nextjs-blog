@@ -9,6 +9,6 @@ export const getCoffe = (readingTime: number, zone: number = 900) => {
   let min = Math.ceil(readingTime / zone);
   return {
     num: min,
-    coffe: new Array(Math.ceil(min / 6)).fill("☕️").join(""),
+    coffee: new Array(Math.ceil(min / 6)).fill("☕️").join(""),
   };
 };

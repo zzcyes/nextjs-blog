@@ -4,23 +4,23 @@ export interface IBlogActicleTitle {
   title: string;
   date?: string;
   reading?: string | number;
-  coffe?: string;
+  coffee?: string;
 }
 
 const BlogArticleTitle = ({
   title,
   date,
   reading,
-  coffe,
+  coffee,
 }: IBlogActicleTitle) => {
   return (
     <div className={styles.titleContainer}>
       <div className={styles.title}>{title}</div>
-      <p className={styles.brief}>
+      <div className={styles.brief}>
         {date ?? "?"} <span className={styles.dot}>•</span>{" "}
-        {coffe ? coffe : "☕️"}
+        {coffee ? coffee : "☕️"} &nbsp;
         {reading ?? 6} min read
-      </p>
+      </div>
     </div>
   );
 };

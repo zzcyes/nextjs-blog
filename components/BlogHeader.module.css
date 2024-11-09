@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.iconImage {
+    transform: translateX(-4px);
+}
+
 @media (max-width: 768px) {
     .blogTitle {
         font-size: 2rem;
