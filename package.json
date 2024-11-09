@@ -17,15 +17,10 @@
     "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.3.0",
-    "@mdx-js/react": "^2.3.0",
     "@next/bundle-analyzer": "^15.0.3",
-    "@next/mdx": "^12.1.6",
     "@types/markdown-navbar": "^1.4.0",
     "@types/react-toggle": "^4.0.3",
-    "github-markdown-css": "^5.1.0",
     "gray-matter": "^4.0.3",
-    "lz-string": "^1.4.4",
     "markdown-navbar": "^1.4.3",
     "moment": "^2.29.3",
     "next": "12.1.6",
