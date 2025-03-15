@@ -1,57 +1,91 @@
-## Getting Started
+# Next.js 博客项目
 
-![demo.png](./assets/demo.png)
+![项目截图](./assets/demo.png)
 
-## Usage
+这是一个基于Next.js构建的个人博客项目，主要用于分享技术文章和个人见解。
 
-First, build the development server:
+## 功能特性
+
+- 响应式设计，支持移动端和桌面端
+- Markdown文章支持
+- 文章分类和标签
+- 夜间模式支持
+- 文章搜索功能
+
+## 快速开始
+
+### 环境要求
+
+- Node.js 16.x 或更高版本
+- npm 或 yarn
+
+### 安装依赖
 
 ```bash
-npm run build
-# or
-yarn build
+npm install
+# 或者
+yarn install
 ```
-next to run the development server:
+
+### 开发模式
 
 ```bash
 npm run dev
-# or
+# 或者
 yarn dev
 ```
 
-next to run the production server:
+打开 [http://localhost:3000](http://localhost:3000) 查看效果。
+
+### 生产构建
+
+```bash
+npm run build
+# 或者
+yarn build
+```
+
+### 启动生产服务器
 
 ```bash
 npm run start
-# or
+# 或者
 yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 常见问题
 
-## Q&A
-
-1. Build failed because of webpack errors
+### 1. 构建失败（Webpack错误）
 
 ```bash
 error - Failed to patch lockfile, please try uninstalling and reinstalling next in this workspace
 TypeError: fetch failed
-    at node:internal/deps/undici/undici:12618:11
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async Object.patchIncorrectLockfile (/Users/zhongzichen/Develop/zzcyes-github/nextjs-blog/node_modules/next/dist/lib/patch-incorrect-lockfile.js:72:33)
-    at async Object.build [as default] (/Users/zhongzichen/Develop/zzcyes-github/nextjs-blog/node_modules/next/dist/build/index.js:1350:9) {
-  cause: ConnectTimeoutError: Connect Timeout Error
-      at onConnectTimeout (node:internal/deps/undici/undici:7760:28)
-      at node:internal/deps/undici/undici:7716:50
-      at Immediate._onImmediate (node:internal/deps/undici/undici:7748:13)
-      at process.processImmediate (node:internal/timers:476:21) {
-    code: 'UND_ERR_CONNECT_TIMEOUT'
-  }
-}
-
-> Build failed because of webpack errors
 ```
 
-When on an M1 Mac and switching from a Node.js version without M1 support to one with, e.g. v14 to v16, you may need a different swc dependency which can require re-installing node_modules (npm i --force or yarn install --force).
+**解决方案：**
 
-https://nextjs.org/docs/messages/failed-loading-swc
+1. 尝试强制重新安装依赖：
+
+```bash
+npm i --force
+# 或者
+yarn install --force
+```
+
+2. 如果是在M1 Mac上，从不受支持的Node.js版本（如v14）切换到支持的版本（如v16），可能需要重新安装node_modules。
+
+更多信息请参考：[Next.js SWC加载失败](https://nextjs.org/docs/messages/failed-loading-swc)
+
+## 贡献指南
+
+欢迎提交Pull Request！请确保遵循以下步骤：
+
+1. Fork 本项目
+2. 创建你的功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个Pull Request
+
+## 许可证
+
+本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
