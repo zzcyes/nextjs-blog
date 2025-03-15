@@ -1,5 +1,87 @@
 [
     {
+        "title": "Redux 源码解析（八）：设计模式与架构思想",
+        "date": "2023-01-28 15:51:49",
+        "slug": "08-redux-design-patterns",
+        "atimeMs": 1742035172446.2432,
+        "mtimeMs": 1742035172435.586,
+        "ctimeMs": 1742035172435.586,
+        "birthtimeMs": 1742029768487.1675,
+        "words": 4997
+    },
+    {
+        "title": "Redux 源码解析（七）：完整工作流程",
+        "date": "2023-01-28 10:31:45",
+        "slug": "07-redux-workflow",
+        "atimeMs": 1742035172443.9587,
+        "mtimeMs": 1742035172415.468,
+        "ctimeMs": 1742035172415.468,
+        "birthtimeMs": 1742029768472.024,
+        "words": 11068
+    },
+    {
+        "title": "Redux 源码解析（五）：bindActionCreators",
+        "date": "2023-01-27 16:25:54",
+        "slug": "05-bindActionCreators-analysis",
+        "atimeMs": 1742035172446.2197,
+        "mtimeMs": 1742035172400.0134,
+        "ctimeMs": 1742035172400.0134,
+        "birthtimeMs": 1742029768452.8083,
+        "words": 3383
+    },
+    {
+        "title": "Redux 源码解析（六）：compose",
+        "date": "2023-01-27 10:41:32",
+        "slug": "06-compose-analysis",
+        "atimeMs": 1742035172443.7446,
+        "mtimeMs": 1742035172415.4236,
+        "ctimeMs": 1742035172415.4236,
+        "birthtimeMs": 1742029768458.507,
+        "words": 2953
+    },
+    {
+        "title": "Redux 源码解析（四）：applyMiddleware",
+        "date": "2023-01-26 17:31:15",
+        "slug": "04-applyMiddleware-analysis",
+        "atimeMs": 1742035172404.8042,
+        "mtimeMs": 1742035172387.2302,
+        "ctimeMs": 1742035172387.2302,
+        "birthtimeMs": 1742029768433.4055,
+        "words": 3004
+    },
+    {
+        "title": "Redux 源码解析（三）：combineReducers",
+        "date": "2023-01-26 11:53:12",
+        "slug": "03-combineReducers-analysis",
+        "atimeMs": 1742035172421.3333,
+        "mtimeMs": 1742035172393.3582,
+        "ctimeMs": 1742035172393.3582,
+        "birthtimeMs": 1742029768427.1023,
+        "words": 8550
+    },
+    {
+        "title": "Redux 源码解析（二）：createStore",
+        "date": "2023-01-24 09:45:22",
+        "tag": "AI",
+        "slug": "02-createStore-analysis",
+        "atimeMs": 1742035172405.135,
+        "mtimeMs": 1742035172392.6462,
+        "ctimeMs": 1742035172392.6462,
+        "birthtimeMs": 1742029768414.159,
+        "words": 7093
+    },
+    {
+        "title": "Redux 源码解析（一）：架构概述",
+        "date": "2023-01-23 16:25:31",
+        "tag": "AI",
+        "slug": "01-redux-architecture",
+        "atimeMs": 1742034630541.1843,
+        "mtimeMs": 1742034630530.286,
+        "ctimeMs": 1742034630530.286,
+        "birthtimeMs": 1742029768407.9744,
+        "words": 3147
+    },
+    {
         "title": "Babel源码解析（一）：源码调试（上）",
         "date": "2022-12-19 22:54:44",
         "slug": "babel-reading-source-code-1-debugger",
@@ -10,24 +92,24 @@
         "words": 4357
     },
     {
-        "title": "Redux源码阅读（一）：源码调试（下）",
+        "title": "Redux 源码调试（下）",
         "date": "2022-05-27 20:15:36",
         "slug": "redux-reading-source-code-1-debugger-down",
-        "atimeMs": 1730616039987.8,
-        "mtimeMs": 1671458353375.315,
-        "ctimeMs": 1671458353375.315,
+        "atimeMs": 1742035284534.5222,
+        "mtimeMs": 1742035284523.8518,
+        "ctimeMs": 1742035284523.8518,
         "birthtimeMs": 1671458353375.2385,
-        "words": 5292
+        "words": 5284
     },
     {
-        "title": "Redux源码阅读（一）：源码调试（上）",
+        "title": "Redux 源码调试（上）",
         "date": "2022-05-27 20:05:02",
         "slug": "redux-reading-source-code-1-debugger-up",
-        "atimeMs": 1730616040111.7302,
-        "mtimeMs": 1671458353375.4138,
-        "ctimeMs": 1671458353375.4138,
+        "atimeMs": 1742035281885.7139,
+        "mtimeMs": 1742035281867.4822,
+        "ctimeMs": 1742035281867.4822,
         "birthtimeMs": 1671458353375.3486,
-        "words": 3869
+        "words": 3861
     },
     {
         "title": "CORS errors: The 'Access-Control-Allow-Origin' header contains multiple values '*, *', but only one is allowed.",

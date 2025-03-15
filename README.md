@@ -24,7 +24,7 @@
 ```bash
 npm install
 # 或者
-yarn install
+pnpm install
 ```
 
 ### 开发模式
@@ -32,7 +32,7 @@ yarn install
 ```bash
 npm run dev
 # 或者
-yarn dev
+pnpm dev
 ```
 
 打开 [http://localhost:3000](http://localhost:3000) 查看效果。
@@ -42,7 +42,7 @@ yarn dev
 ```bash
 npm run build
 # 或者
-yarn build
+pnpm build
 ```
 
 ### 启动生产服务器
@@ -50,7 +50,7 @@ yarn build
 ```bash
 npm run start
 # 或者
-yarn start
+pnpm start
 ```
 
 ## 常见问题
@@ -69,7 +69,7 @@ TypeError: fetch failed
 ```bash
 npm i --force
 # 或者
-yarn install --force
+pnpm install --force
 ```
 
 2. 如果是在M1 Mac上，从不受支持的Node.js版本（如v14）切换到支持的版本（如v16），可能需要重新安装node_modules。

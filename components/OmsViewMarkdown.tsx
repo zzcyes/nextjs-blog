@@ -13,6 +13,7 @@ import {
   // @ts-ignore
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm"; // markdown 对表格/删除线/脚注等的支持
+import Mermaid from './Mermaid';
 
 // darcula webstorm
 // vscDarkPlus vscode暗色主题
@@ -46,21 +47,31 @@ const OmsViewMarkdown = (props: tProps) => {
         // @ts-ignore
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || "");
-          return !inline && match ? (
-            <SyntaxHighlighter
-              showLineNumbers={true}
-              style={darkMode ? them.dark : them.light}
-              language={match[1]}
-              PreTag="div"
-              {...props}
-            >
-              {String(children).replace(/\n$/, "")}
-            </SyntaxHighlighter>
-          ) : (
-            <code className={className} {...props}>
-              {children}
-            </code>
-          );
+          const codeContent = String(children).replace(/\n$/, '');
+          if (!inline && match) {
+            const language = match[1];
+            if (language === 'mermaid') {
+              return <Mermaid chart={codeContent} />;
+            } else {
+              return (
+                <SyntaxHighlighter
+                  showLineNumbers
+                  style={darkMode ? them.dark : them.light}
+                  language={language}
+                  PreTag="div"
+                  {...props}
+                >
+                  {codeContent}
+                </SyntaxHighlighter>
+              );
+            }
+          } else {
+            return (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          }
         },
       }}
     >
