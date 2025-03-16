@@ -19,7 +19,7 @@ function combineReducers(reducers: Object): Function
 
 ## 核心实现分析
 
-### 1. 预处理 Reducers
+### 预处理 Reducers
 
 ```javascript
 export default function combineReducers(reducers) {
@@ -57,7 +57,7 @@ export default function combineReducers(reducers) {
 4. 创建最终的 reducers 对象
 5. 初始化意外键的缓存（仅在开发环境）
 
-### 2. Reducer 形状验证
+### Reducer 形状验证
 
 ```javascript
 function assertReducerShape(reducers) {
@@ -111,7 +111,7 @@ try {
 - 能够正确处理未知的 action 类型
 - 不会返回 undefined 作为状态
 
-### 3. 状态形状验证
+### 状态形状验证
 
 ```javascript
 function getUnexpectedStateShapeWarningMessage(
@@ -171,7 +171,7 @@ function getUnexpectedStateShapeWarningMessage(
 5. 对于 REPLACE action，跳过警告
 6. 提供详细的警告信息，指出具体的问题
 
-### 4. 组合函数的实现
+### 组合函数的实现
 
 ```javascript
 return function combination(state = {}, action) {

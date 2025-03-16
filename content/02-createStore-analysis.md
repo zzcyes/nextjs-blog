@@ -22,7 +22,7 @@ function createStore(reducer, preloadedState, enhancer)
 
 ## 核心实现分析
 
-### 1. 参数校验与处理
+### 参数校验与处理
 
 ```javascript
 if (
@@ -57,7 +57,7 @@ if (typeof enhancer !== 'undefined') {
 
 enhancer 的应用是通过高阶函数实现的：`enhancer(createStore)(reducer, preloadedState)`，这使得 enhancer 可以完全控制 store 的创建过程。
 
-### 2. 内部状态维护
+### 内部状态维护
 
 ```javascript
 let currentReducer = reducer
@@ -74,7 +74,7 @@ let isDispatching = false
 - `nextListeners`: 下一次 dispatch 时的监听器数组（用于安全修改监听器列表）
 - `isDispatching`: 是否正在进行 dispatch（防止在 reducer 执行过程中调用某些方法）
 
-### 3. 监听器列表安全修改
+### 监听器列表安全修改
 
 ```javascript
 function ensureCanMutateNextListeners() {
@@ -89,7 +89,7 @@ function ensureCanMutateNextListeners() {
 2. 如果相同，创建 currentListeners 的浅拷贝
 3. 这样可以在 dispatch 过程中安全地修改 nextListeners，而不影响当前正在遍历的 currentListeners
 
-### 4. 核心方法：dispatch
+### 核心方法：dispatch
 
 ```javascript
 function dispatch(action) {
@@ -133,7 +133,7 @@ dispatch 方法是 Redux 的核心，它的执行流程：
 8. 通知所有监听器
 9. 返回原始 action（便于链式调用）
 
-### 5. 订阅机制：subscribe
+### 订阅机制：subscribe
 
 ```javascript
 function subscribe(listener) {
@@ -186,7 +186,7 @@ subscribe 方法实现了发布-订阅模式：
    - 从 nextListeners 中移除监听器
    - 清空 currentListeners 引用
 
-### 6. 状态获取：getState
+### 状态获取：getState
 
 ```javascript
 function getState() {
@@ -204,7 +204,7 @@ getState 方法很简单，但有两个关键点：
 - 防止在 reducer 执行过程中获取状态
 - 直接返回 currentState 的引用（而非副本）
 
-### 7. 替换 Reducer：replaceReducer
+### 替换 Reducer：replaceReducer
 
 ```javascript
 function replaceReducer(nextReducer) {
@@ -223,7 +223,7 @@ replaceReducer 用于热重载和代码分割：
 3. 触发特殊的 REPLACE action，使用随机字符串防止冲突
 4. 这会导致使用新 reducer 重新计算状态
 
-### 8. 初始化 Store
+### 初始化 Store
 
 ```javascript
 // 初始化 store 时，发送一个特殊的 INIT action

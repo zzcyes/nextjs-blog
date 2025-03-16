@@ -19,7 +19,7 @@ function compose(...funcs: Function[]): Function
 
 ## 核心实现分析
 
-### 1. 基本实现
+### 基本实现
 
 ```javascript
 export default function compose(...funcs) {
@@ -40,7 +40,7 @@ export default function compose(...funcs) {
 2. 处理只有一个函数的情况，直接返回该函数
 3. 使用 reduce 从右到左组合多个函数
 
-### 2. 组合过程图解
+### 组合过程图解
 
 ```mermaid
 graph LR
@@ -51,7 +51,7 @@ graph LR
     E[compose<br>f,g,h] --> F["(...args) => f(g(h(...args)))"]
 ```
 
-### 3. 执行流程
+### 执行流程
 
 ```mermaid
 sequenceDiagram
@@ -69,7 +69,7 @@ sequenceDiagram
 
 ## 使用示例
 
-### 1. 基本使用
+### 基本使用
 
 ```javascript
 const add1 = (x) => x + 1
@@ -85,7 +85,7 @@ const calculate = compose(
 console.log(calculate(5))  // ((5 + 1) * 2) - 3 = 9
 ```
 
-### 2. 在 Redux 中间件中的应用
+### 在 Redux 中间件中的应用
 
 ```javascript
 const middleware = compose(
@@ -99,7 +99,7 @@ const store = createStore(reducer, middleware)
 
 ## 实现源码解析
 
-### 1. 函数组合过程
+### 函数组合过程
 
 ```javascript
 // 假设有三个函数 f, g, h
@@ -116,7 +116,7 @@ const step1 = (...args) => f(g(...args))
 const step2 = (...args) => step1(h(...args))
 ```
 
-### 2. 数学表示
+### 数学表示
 
 \[
 compose(f, g, h)(x) = f(g(h(x)))
@@ -124,7 +124,7 @@ compose(f, g, h)(x) = f(g(h(x)))
 
 ## 性能优化
 
-### 1. 缓存组合结果
+### 缓存组合结果
 
 ```javascript
 const memoizedCompose = (...funcs) => {
@@ -143,7 +143,7 @@ const memoizedCompose = (...funcs) => {
 }
 ```
 
-### 2. 优化参数传递
+### 优化参数传递
 
 ```javascript
 const optimizedCompose = (...funcs) => {
@@ -159,7 +159,7 @@ const optimizedCompose = (...funcs) => {
 
 ## 实际应用场景
 
-### 1. 中间件组合
+### 中间件组合
 
 ```javascript
 const enhancer = compose(
@@ -169,7 +169,7 @@ const enhancer = compose(
 )
 ```
 
-### 2. 数据转换
+### 数据转换
 
 ```javascript
 const processUser = compose(
@@ -179,7 +179,7 @@ const processUser = compose(
 )
 ```
 
-### 3. 高阶组件组合
+### 高阶组件组合
 
 ```javascript
 const enhance = compose(

@@ -19,7 +19,7 @@ function applyMiddleware(...middlewares: Middleware[]): StoreEnhancer
 
 ## 核心实现分析
 
-### 1. 基本结构
+### 基本结构
 
 ```javascript
 export default function applyMiddleware(...middlewares) {
@@ -35,7 +35,7 @@ export default function applyMiddleware(...middlewares) {
 2. 返回一个接收 createStore 的函数
 3. 最终返回一个增强后的 store
 
-### 2. 中间件 API 构建
+### 中间件 API 构建
 
 ```javascript
 let dispatch = () => {
@@ -55,7 +55,7 @@ const middlewareAPI = {
 - `getState`: 访问当前状态
 - `dispatch`: 动态引用，确保使用最新的 dispatch 函数
 
-### 3. 中间件链组合
+### 中间件链组合
 
 ```javascript
 const chain = middlewares.map((middleware) => middleware(middlewareAPI))
@@ -67,7 +67,7 @@ dispatch = compose(...chain)(store.dispatch)
 2. 使用 compose 函数组合所有中间件
 3. 传入原始 dispatch 构建增强版 dispatch
 
-### 4. 返回增强后的 Store
+### 返回增强后的 Store
 
 ```javascript
 return {

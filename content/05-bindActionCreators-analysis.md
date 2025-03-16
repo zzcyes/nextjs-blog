@@ -23,7 +23,7 @@ function bindActionCreators(
 
 ## 核心实现分析
 
-### 1. 单个 Action Creator 的绑定
+### 单个 Action Creator 的绑定
 
 ```javascript
 function bindActionCreator(actionCreator, dispatch) {
@@ -38,7 +38,7 @@ function bindActionCreator(actionCreator, dispatch) {
 2. 保持原函数的参数和上下文
 3. 自动调用 dispatch
 
-### 2. 主函数实现
+### 主函数实现
 
 ```javascript
 export default function bindActionCreators(actionCreators, dispatch) {
@@ -86,7 +86,7 @@ graph TD
 
 ## 使用示例
 
-### 1. 单个 Action Creator
+### 单个 Action Creator
 
 ```javascript
 // 原始 action creator
@@ -102,7 +102,7 @@ const boundIncrement = bindActionCreators(increment, dispatch)
 boundIncrement(5) // 等同于 dispatch(increment(5))
 ```
 
-### 2. Action Creators 对象
+### Action Creators 对象
 
 ```javascript
 const actionCreators = {
@@ -125,7 +125,7 @@ boundActionCreators.decrement(3)  // 等同于 dispatch(actionCreators.decrement
 
 ## 实际应用场景
 
-### 1. React 组件中的使用
+### React 组件中的使用
 
 ```javascript
 // 不使用 bindActionCreators
@@ -147,7 +147,7 @@ class TodoList extends React.Component {
 }
 ```
 
-### 2. 与 connect 配合使用
+### 与 connect 配合使用
 
 ```javascript
 import { connect } from 'react-redux'

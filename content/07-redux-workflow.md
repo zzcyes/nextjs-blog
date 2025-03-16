@@ -88,7 +88,7 @@ sequenceDiagram
 
 ## 组件交互详解
 
-### 1. Action 与 Action Creator
+### Action 与 Action Creator
 
 Action 是描述发生了什么的普通 JavaScript 对象，必须包含 `type` 属性。Action Creator 是创建 action 的函数。
 
@@ -112,7 +112,7 @@ Action 可以分为两类：
 - **同步 Action**：普通对象，立即被处理
 - **异步 Action**：通过中间件处理，如函数（redux-thunk）或 Promise（redux-promise）
 
-### 2. Store 与 Dispatch
+### Store 与 Dispatch
 
 Store 是保存状态的对象，通过 `createStore` 创建。`dispatch` 是触发状态更新的唯一方法。
 
@@ -131,7 +131,7 @@ Dispatch 流程：
 4. 更新 store 中的状态
 5. 通知所有订阅者
 
-### 3. Reducer 与状态计算
+### Reducer 与状态计算
 
 Reducer 是纯函数，接收当前状态和 action，返回新状态。
 
@@ -152,7 +152,7 @@ Reducer 处理流程：
 3. 不修改原状态，返回新状态对象
 4. 对未知 action 返回原状态
 
-### 4. 中间件与增强功能
+### 中间件与增强功能
 
 中间件提供了扩展 dispatch 的方式，可以处理异步操作、日志记录等。
 
@@ -178,7 +178,7 @@ const store = createStore(
    - 分发新的 action
 3. 最后一个中间件将 action 传给 reducer
 
-### 5. 订阅与通知机制
+### 订阅与通知机制
 
 Store 提供 `subscribe` 方法注册监听器，在状态变化时通知它们。
 
@@ -353,7 +353,7 @@ function TodoApp() {
 
 Redux 应用的性能优化主要集中在以下几个方面：
 
-### 1. 减少不必要的渲染
+### 减少不必要的渲染
 
 ```mermaid
 graph TD
@@ -365,7 +365,7 @@ graph TD
     E -->|实现| H[shouldComponentUpdate]
 ```
 
-### 2. 高效的状态更新
+### 高效的状态更新
 
 ```javascript
 // 不推荐 - 直接修改
@@ -388,7 +388,7 @@ return produce(state, draft => {
 })
 ```
 
-### 3. 批量更新
+### 批量更新
 
 ```javascript
 // 不推荐 - 多次独立 dispatch
@@ -479,7 +479,7 @@ graph TD
 
 ### 主要区别
 
-#### 1. Action 定义
+#### Action 定义
 
 **传统 Redux**:
 ```javascript
@@ -520,7 +520,7 @@ const todosSlice = createSlice({
 export const { addTodo, toggleTodo } = todosSlice.actions
 ```
 
-#### 2. Reducer 实现
+#### Reducer 实现
 
 **传统 Redux**:
 ```javascript
@@ -568,7 +568,7 @@ const todosSlice = createSlice({
 export default todosSlice.reducer
 ```
 
-#### 3. Store 配置
+#### Store 配置
 
 **传统 Redux**:
 ```javascript
@@ -608,7 +608,7 @@ const store = configureStore({
 export default store
 ```
 
-#### 4. 异步操作
+#### 异步操作
 
 **传统 Redux (使用 redux-thunk)**:
 ```javascript

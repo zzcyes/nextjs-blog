@@ -7,7 +7,7 @@ Redux 不仅是一个状态管理库，它还体现了多种软件设计模式�
 
 ## 核心设计模式
 
-### 1. 单向数据流 (Unidirectional Data Flow)
+### 单向数据流 (Unidirectional Data Flow)
 
 Redux 最核心的设计模式是单向数据流，这种模式确保了数据在应用中的流动是可预测的。
 
@@ -29,7 +29,7 @@ graph LR
 - 调试简单
 - 数据流向清晰
 
-### 2. 命令模式 (Command Pattern)
+### 命令模式 (Command Pattern)
 
 Action 在 Redux 中实现了命令模式，它将"意图"封装成对象。
 
@@ -54,7 +54,7 @@ store.dispatch(addTodoAction)
 - 便于序列化和记录
 - 支持撤销/重做功能
 
-### 3. 观察者模式 (Observer Pattern)
+### 观察者模式 (Observer Pattern)
 
 Redux 的订阅机制实现了观察者模式，允许组件订阅状态变化。
 
@@ -79,7 +79,7 @@ unsubscribe()
 - 支持多个观察者
 - 状态变化时自动通知
 
-### 4. 中介者模式 (Mediator Pattern)
+### 中介者模式 (Mediator Pattern)
 
 Store 在 Redux 中充当中介者，协调 action、reducer 和视图之间的交互。
 
@@ -97,7 +97,7 @@ const store = createStore(reducer)
 - 简化组件间通信
 - 降低系统耦合度
 
-### 5. 装饰器模式 (Decorator Pattern)
+### 装饰器模式 (Decorator Pattern)
 
 Redux 中间件和 enhancer 实现了装饰器模式，用于增强 store 的功能。
 
@@ -118,7 +118,7 @@ const store = createStore(
 - 支持功能的组合和排序
 - 保持单一职责原则
 
-### 6. 组合模式 (Composite Pattern)
+### 组合模式 (Composite Pattern)
 
 combineReducers 实现了组合模式，将多个 reducer 组合成一个。
 
@@ -139,7 +139,7 @@ const rootReducer = combineReducers({
 - 关注点分离
 - 可组合性
 
-### 7. 工厂模式 (Factory Pattern)
+### 工厂模式 (Factory Pattern)
 
 createStore 函数实现了工厂模式，用于创建 store 实例。
 
@@ -159,7 +159,7 @@ const store = createStore(reducer, preloadedState, enhancer)
 
 ## 架构思想
 
-### 1. 函数式编程 (Functional Programming)
+### 函数式编程 (Functional Programming)
 
 Redux 大量采用函数式编程思想，特别是在 reducer 和中间件的实现上。
 
@@ -188,7 +188,7 @@ const enhancer = compose(
 )
 ```
 
-### 2. CQRS (命令查询责任分离)
+### CQRS (命令查询责任分离)
 
 Redux 实现了 CQRS 模式的简化版本，将状态的读取和修改分开。
 
@@ -201,7 +201,7 @@ Redux 实现了 CQRS 模式的简化版本，将状态的读取和修改分开�
 - 简化状态管理
 - 提高可测试性
 
-### 3. 事件溯源 (Event Sourcing)
+### 事件溯源 (Event Sourcing)
 
 Redux 的 action 日志可以看作是事件溯源模式的一种实现。
 
@@ -215,7 +215,7 @@ Redux 的 action 日志可以看作是事件溯源模式的一种实现。
 - 支持时间旅行调试
 - 状态可重建
 
-### 4. 依赖注入 (Dependency Injection)
+### 依赖注入 (Dependency Injection)
 
 Redux 通过 Provider 和 connect 实现了一种依赖注入模式。
 
@@ -243,7 +243,7 @@ connect(mapStateToProps, mapDispatchToProps)(Component)
 
 通过分析 Redux 示例代码，我们可以看到这些设计模式是如何在实际应用中使用的：
 
-### 1. 计数器示例 (Counter)
+### 计数器示例 (Counter)
 
 最简单的示例展示了单向数据流和命令模式：
 
@@ -262,7 +262,7 @@ const render = () => ReactDOM.render(
 store.dispatch({ type: 'INCREMENT' })
 ```
 
-### 2. 待办事项示例 (Todos)
+### 待办事项示例 (Todos)
 
 展示了组合模式和工厂模式：
 
@@ -277,7 +277,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer)
 ```
 
-### 3. 异步示例 (Async)
+### 异步示例 (Async)
 
 展示了装饰器模式和观察者模式：
 
@@ -301,7 +301,7 @@ const store = createStore(
 
 ## Redux 与其他架构的比较
 
-### 1. Redux vs Flux
+### Redux vs Flux
 
 Flux 是 Facebook 提出的单向数据流架构，Redux 是受其启发的简化实现。
 
@@ -311,7 +311,7 @@ Flux 是 Facebook 提出的单向数据流架构，Redux 是受其启发的简�
 - Redux 状态不可变，Flux 没有强制要求
 - Redux 更简洁，API 更少
 
-### 2. Redux vs MVC
+### Redux vs MVC
 
 MVC (Model-View-Controller) 是传统的 UI 架构模式。
 
@@ -321,7 +321,7 @@ MVC (Model-View-Controller) 是传统的 UI 架构模式。
 - Redux 强调不可变性，MVC 通常允许直接修改模型
 - Redux 更适合复杂的 UI 状态管理
 
-### 3. Redux vs MVVM
+### Redux vs MVVM
 
 MVVM (Model-View-ViewModel) 是另一种流行的 UI 架构模式。
 
@@ -335,7 +335,7 @@ MVVM (Model-View-ViewModel) 是另一种流行的 UI 架构模式。
 
 Redux 遵循以下设计原则：
 
-### 1. 单一责任原则 (SRP)
+### 单一责任原则 (SRP)
 
 每个模块只负责一个功能：
 - reducer 只负责计算新状态
@@ -343,21 +343,21 @@ Redux 遵循以下设计原则：
 - middleware 只负责处理副作用
 - store 只负责状态存储和变化通知
 
-### 2. 开闭原则 (OCP)
+### 开闭原则 (OCP)
 
 Redux 通过中间件和 enhancer 实现了对扩展开放，对修改封闭：
 - 核心功能保持不变
 - 通过中间件扩展功能
 - 不需要修改源码
 
-### 3. 依赖倒置原则 (DIP)
+### 依赖倒置原则 (DIP)
 
 高层模块不依赖低层模块，两者都依赖抽象：
 - 组件不直接依赖 store，而是依赖 props
 - reducer 不依赖具体 action 创建方式
 - middleware 依赖抽象的 API 而非具体实现
 
-### 4. 接口隔离原则 (ISP)
+### 接口隔离原则 (ISP)
 
 Redux 提供了最小化的 API：
 - createStore 创建 store
@@ -365,7 +365,7 @@ Redux 提供了最小化的 API：
 - getState 获取状态
 - subscribe 订阅变化
 
-### 5. 最少知识原则 (LoD)
+### 最少知识原则 (LoD)
 
 组件只与直接相关的部分交互：
 - 组件通过 props 获取状态和分发 action
